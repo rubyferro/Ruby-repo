@@ -1,5 +1,57 @@
-<h1> Ruby's To-Do List</h1>
-<input type="text">
-<button> 
-    add
-</button>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+
+    <style>
+        #siteTitle {
+            font-family: 'East Sea Dokdo', cursive;
+            text-align: center;
+        }
+
+        .content {
+            align-content: center;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <h1 id="siteTitle">Ruby's To-Do List</h1>
+
+    <center>
+        <input id="boobs" type="text">
+        <button onclick="buttonClicked()">
+            add
+        </button>
+
+        <ul id="mytodos">
+
+
+        </ul>
+    </center>
+        
+    
+
+</body>
+
+
+<script>
+    function buttonClicked() {
+        var todoItem = document.getElementById("boobs").value
+
+        var listElement = document.createElement("li")
+
+        listElement.innerText = todoItem
+
+        document.getElementById("mytodos").appendChild(listElement)
+
+    }
+</script>
+
+</html>
